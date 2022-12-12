@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Number Information</title>
+	<link rel="stylesheet" href="{{
+		url_for('static', filename='css/main.css')}}">
+</head>
+
+<body>
+	<img src="https://zeevector.com/wp-content/uploads/Phone-Icon-Vector-PNG.png" alt="phone logo" width="100em" height="100em">
+	<br>
+	<form action="check" method="post">
+		<p>Fill in the number you want to check</p>
+		<p><i>Make sure to add the country code (Example: +359)</i></p>
+		<br>
+		<input type="tel" name="number_input">
+		<br>
+		<input type="submit" value="CHECK" id="check">
+		{% for message in get_flashed_messages() %}
+			<p> {{ message }} </p>
+		{% endfor %}
+	</form>
+</body>
+</html>
+
