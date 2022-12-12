@@ -9,7 +9,7 @@ app = Flask(__name__)
 app.secret_key = "password"
 
 
-@app.route('/')
+@app.route('/checker')
 def index():
     flash("")
     return render_template('index.html')
